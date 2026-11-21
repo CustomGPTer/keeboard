@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KeeBoard: a private keyboard for Android that stays offline</title>
+<meta name="description" content="KeeBoard is a keyboard for Android with no internet permission: UK and US English, glide typing, 3,963 emojis, offline voice typing, clipboard history, split and floating layouts and your own themes. Free, no adverts, no account. A test build.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/keeboard/">
+<meta name="theme-color" content="#f4f5f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0f15" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KeeBoard">
+<meta property="og:title" content="KeeBoard: a private keyboard for Android that stays offline">
+<meta property="og:description" content="KeeBoard is a keyboard for Android with no internet permission: UK and US English, glide typing, 3,963 emojis, offline voice typing, clipboard history, split and floating layouts and your own themes. Free, no adverts, no account. A test build.">
+<meta property="og:url" content="https://customgpter.github.io/keeboard/">
+<meta property="og:image" content="https://customgpter.github.io/keeboard/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="KeeBoard&#x27;s keyboard with the number row and toolbar, under a typing area">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"KeeBoard","url":"https://customgpter.github.io/keeboard/","description":"KeeBoard is a keyboard for Android with no internet permission: UK and US English, glide typing, 3,963 emojis, offline voice typing, clipboard history, split and floating layouts and your own themes. Free, no adverts, no account. A test build.","applicationCategory":"UtilitiesApplication","operatingSystem":"Android 10 or later","softwareVersion":"0.1.0 beta 2","downloadUrl":"https://github.com/CustomGPTer/keeboard/releases/download/v0.1.0-beta2/KeeBoard.apk","releaseNotes":"https://customgpter.github.io/keeboard/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/keeboard/assets/og.png","featureList":["UK and US English","Glide typing","Gestures","Voice typing on the phone","3,963 emojis","GIFs and stickers","Clipboard history","Shortcuts and an editing panel","One-handed, split and floating","Height and size","Colours and a background","An encrypted backup"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is KeeBoard free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts."}},{"@type":"Question","name":"Is it on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. It is downloaded from this site as an Android app file. It needs Android 10 or later."}},{"@type":"Question","name":"Android warned me about the keyboard. Is that normal?","acceptedAnswer":{"@type":"Answer","text":"Yes. Android shows the same warning for every keyboard that is not built into the phone, because any keyboard sees what you type. KeeBoard has no internet permission, so what it sees cannot leave the phone."}},{"@type":"Question","name":"Android says the setting is restricted. What do I do?","acceptedAnswer":{"@type":"Answer","text":"For an app installed from a file, some phones hide the switch at first. Open KeeBoard's App info, tap the three dots, choose Allow restricted settings, then try again."}},{"@type":"Question","name":"Does it translate?","acceptedAnswer":{"@type":"Answer","text":"No. Translation needs the internet, and KeeBoard does not go online."}},{"@type":"Question","name":"Which languages does it type?","acceptedAnswer":{"@type":"Answer","text":"UK English and US English. Other languages are not in this test build."}},{"@type":"Question","name":"Why is the download so big?","acceptedAnswer":{"@type":"Answer","text":"The voice typing engine, the English dictionaries and the emoji pictures are all inside the app, so nothing has to be fetched later."}},{"@type":"Question","name":"How do I update it?","acceptedAnswer":{"@type":"Answer","text":"Install the new version over the one you have. Do not uninstall first, or your words, shortcuts and settings are lost. A backup file keeps them safe."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="KeeBoard home"><svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="24" fill="#2b3a55"/><g fill="#fff"><rect x="24" y="38" width="60" height="36" rx="7" fill="none" stroke="#fff" stroke-width="4.5"/><rect x="32" y="46" width="7" height="6" rx="1.5"/><rect x="43" y="46" width="7" height="6" rx="1.5"/><rect x="54" y="46" width="7" height="6" rx="1.5"/><rect x="65" y="46" width="7" height="6" rx="1.5"/><rect x="38" y="59" width="32" height="6" rx="2"/></g></svg><span>KeeBoard</span></a><span class="beta-tag">Beta</span>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="https://github.com/CustomGPTer/keeboard/releases/download/v0.1.0-beta2/KeeBoard.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>A keyboard that keeps what you type to itself.</h1>
+<p class="lede">KeeBoard is a keyboard for Android. It types in UK or US English, with word suggestions, glide typing, emojis, voice typing and a clipboard, and everything it does happens on your phone.</p><p class="lede">It has no internet permission, so it cannot send your words, your clipboard or your voice anywhere. It is free, with no adverts and no account.</p>
+<p class="beta-note"><b>Beta.</b> This is a test build. It has been checked on an emulator, and suggestions, glide typing and voice typing still need tuning on real phones. The app you type into still receives what you type, as it would with any keyboard.</p>
+<p class="get" id="download"><a class="button" href="https://github.com/CustomGPTer/keeboard/releases/download/v0.1.0-beta2/KeeBoard.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p>
+<ul class="pills"><li>Version 0.1.0 beta 2</li><li>Android 10 or later</li><li>83 MB</li><li>Beta</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/keyboard.png" alt="The keyboard, with a number row and the toolbar, over KeeBoard&#x27;s practice area." width="393" height="852" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No internet</b><span>It has no permission to go online.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No adverts</b><span>None in the app and none on this site.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No account</b><span>There is nothing to sign up to.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>Nothing learned</b><span>Words are added only when you choose.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are the real screens, drawn from the app&#x27;s own code. The keyboard is shown over KeeBoard&#x27;s own practice typing area, as it sits on a phone. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from KeeBoard"><figure class="shot"><div class="phone"><img src="./assets/screens/keyboard.png" alt="The keyboard, with a number row and the toolbar, over KeeBoard&#x27;s practice area." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The keyboard, with a number row and the toolbar, over KeeBoard&#x27;s practice area.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/emoji.png" alt="3,963 built-in emojis, with search and categories." width="393" height="852" loading="eager" decoding="async"></div><figcaption>3,963 built-in emojis, with search and categories.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/clipboard.png" alt="Optional clipboard history, with numbers and links picked out." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Optional clipboard history, with numbers and links picked out.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/tools.png" alt="Keyboard tools: editing keys, incognito, the date and time and shortcuts." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Keyboard tools: editing keys, incognito, the date and time and shortcuts.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/layouts.png" alt="Layout and size: standard, one-handed, split or floating." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Layout and size: standard, one-handed, split or floating.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/light.png" alt="A light keyboard, or your own colours and a picture." width="393" height="852" loading="eager" decoding="async"></div><figcaption>A light keyboard, or your own colours and a picture.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/settings.png" alt="Settings, in plain words, with a page for each part." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Settings, in plain words, with a page for each part.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/privacy.png" alt="Privacy: no internet, and one tap to clear what is kept." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Privacy: no internet, and one tap to clear what is kept.</figcaption></figure></div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">Three steps in Android's settings, then it is there whenever you type.</p>
+<ol class="steps"><li><h3>Install and open KeeBoard</h3><p>Download the app file from this page and open it. KeeBoard shows two buttons to get it working.</p></li><li><h3>Turn it on</h3><p>Tap Enable KeeBoard and switch it on in Android's keyboard list, then tap Choose KeeBoard.</p></li><li><h3>Make it yours</h3><p>Pick UK or US English, a layout and colours, and try it in the practice area before you use it for real.</p></li></ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Everything is in, and all of it is free</h2>
+<p class="intro">Nothing below is held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>Typing</h3><dl><div><dt>UK and US English</dt><dd>Over 120,000 word forms each, with completions and spelling suggestions. Auto-correction is off until you turn it on.</dd></div><div><dt>Glide typing</dt><dd>Slide from letter to letter. It is off at first, so turn it on if you like it.</dd></div><div><dt>Gestures</dt><dd>Slide on the space bar to move the cursor, swipe back to delete a word, and hold a key for accents and symbols.</dd></div><div><dt>Voice typing on the phone</dt><dd>English dictation worked out on the phone itself. Nothing is saved as a recording.</dd></div></dl></div><div class="group"><h3>Extras</h3><dl><div><dt>3,963 emojis</dt><dd>With search, skin tones, favourites and recent ones.</dd></div><div><dt>GIFs and stickers</dt><dd>An offline collection of greetings, and room for your own pictures and GIFs.</dd></div><div><dt>Clipboard history</dt><dd>Optional, and it clears itself after an hour. Pin what you want to keep.</dd></div><div><dt>Shortcuts and an editing panel</dt><dd>Text shortcuts, select, cut, copy, paste, undo, and the date and time.</dd></div></dl></div><div class="group"><h3>Your way</h3><dl><div><dt>One-handed, split and floating</dt><dd>Move the keyboard to one side, split it for two thumbs, or float a smaller one.</dd></div><div><dt>Height and size</dt><dd>Separate heights for upright and sideways, and sizes for keys, letters and emojis.</dd></div><div><dt>Colours and a background</dt><dd>Your own colours or a picture, with themes you can save and share.</dd></div><div><dt>An encrypted backup</dt><dd>Your settings, words and shortcuts in one file with its own passphrase.</dd></div></dl></div></div>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">What you type stays on your phone</h2>
+<ul class="plain"><li><h3>No internet permission</h3><p>Android shows this in the app's permissions. KeeBoard has no way to send anything anywhere.</p></li><li><h3>Two permissions only</h3><p>The microphone, for voice typing when you tap it, and vibration, for key presses.</p></li><li><h3>No learning in secret</h3><p>KeeBoard does not learn from your messages. A word is added to your dictionary only when you add it.</p></li></ul>
+</div>
+</section>
+
+<section id="install" aria-labelledby="install-h">
+<div class="wrap">
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">KeeBoard is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tap Download on your phone. The file is called KeeBoard.apk and is about 83 MB. If Chrome says the file might be harmful, choose Download anyway.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>KeeBoard tells you when a newer version is out. Install the new file over the old one and everything you have saved is kept.</p></li></ol>
+<p class="after-table">Version 0.1.0 beta 2, released 21 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq"><details><summary>Is KeeBoard free?</summary><p>Yes. There is no paid version, no subscription and no adverts.</p></details><details><summary>Is it on Google Play?</summary><p>No. It is downloaded from this site as an Android app file. It needs Android 10 or later.</p></details><details><summary>Android warned me about the keyboard. Is that normal?</summary><p>Yes. Android shows the same warning for every keyboard that is not built into the phone, because any keyboard sees what you type. KeeBoard has no internet permission, so what it sees cannot leave the phone.</p></details><details><summary>Android says the setting is restricted. What do I do?</summary><p>For an app installed from a file, some phones hide the switch at first. Open KeeBoard's App info, tap the three dots, choose Allow restricted settings, then try again.</p></details><details><summary>Does it translate?</summary><p>No. Translation needs the internet, and KeeBoard does not go online.</p></details><details><summary>Which languages does it type?</summary><p>UK English and US English. Other languages are not in this test build.</p></details><details><summary>Why is the download so big?</summary><p>The voice typing engine, the English dictionaries and the emoji pictures are all inside the app, so nothing has to be fetched later.</p></details><details><summary>How do I update it?</summary><p>Install the new version over the one you have. Do not uninstall first, or your words, shortcuts and settings are lost. A backup file keeps them safe.</p></details></div>
+</div>
+</section>
+
+<section class="closing" aria-labelledby="closing-h">
+<div class="wrap">
+<div><h2 id="closing-h">Type freely, privately</h2><p>Free, with no adverts and nothing to unlock. Made by the developer of several other free Android apps: <a href="more-apps.html">see them all</a>.</p></div>
+<a class="button" href="https://github.com/CustomGPTer/keeboard/releases/download/v0.1.0-beta2/KeeBoard.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a>
+</div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="KeeBoard home"><svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="24" fill="#2b3a55"/><g fill="#fff"><rect x="24" y="38" width="60" height="36" rx="7" fill="none" stroke="#fff" stroke-width="4.5"/><rect x="32" y="46" width="7" height="6" rx="1.5"/><rect x="43" y="46" width="7" height="6" rx="1.5"/><rect x="54" y="46" width="7" height="6" rx="1.5"/><rect x="65" y="46" width="7" height="6" rx="1.5"/><rect x="38" y="59" width="32" height="6" rx="2"/></g></svg><span>KeeBoard</span></a>
+<p>&copy; 2026 Jonathan Jackson. KeeBoard is an independent app.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/keeboard/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>
